@@ -1,1 +1,3 @@
-./node_modules/.bin/npm-run-all build:tokens test postinstall
+# .husky/pre-commit
+
+npx lint-staged
