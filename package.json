@@ -1,0 +1,99 @@
+{
+  "name": "@aurodesignsystem/token-primitives",
+  "version": "8.4.3",
+  "description": "Alaska Air Auro Design System token primitive repository",
+  "homepage": "https://github.com/AlaskaAirlines/DesignTokenPrimitives",
+  "author": "Alaska Airlines Product design and engineering",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlaskaAirlines/AuroDesignTokenPrimitives"
+  },
+  "main": "src/",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": "^20.x || ^22.x"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "postcss": "^8.5.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "cssnano": "^7.1.0",
+    "handlebars": "^4.7.8",
+    "husky": "^9.1.7",
+    "npm-run-all": "^4.1.5",
+    "semantic-release": "^24.2.7",
+    "style-dictionary": "^3.9.2"
+  },
+  "scripts": {
+    "build": "npm run test:tokens && npm run build:tokens && npm run transform:css",
+    "build:ci": "npm-run-all sweep test build:tokens",
+    "build:tokens": "node scripts/styleDictionary.mjs",
+    "transform:css": "node scripts/transformCSS.mjs",
+    "test": "npm-run-all test:json test:tokens",
+    "test:json": "node scripts/legacy/jsonTest.js",
+    "test:tokens": "node test/tokenConsistency.js",
+    "sweep": "rm -rf dist/",
+    "prepare": "husky install"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "branch": "master",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "./CHANGELOG.md",
+          "changelogTitle": "# Semantic Release Automated Changelog"
+        }
+      ],
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "./CHANGELOG.md",
+            "package.json",
+            "package-lock.json"
+          ]
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "alaska airlines",
+    "css",
+    "properties",
+    "tokens"
+  ],
+  "contributors": [
+    {
+      "name": "Dale Sande",
+      "email": "dale.sande@alaskaair.com"
+    },
+    {
+      "name": "Jason Baker",
+      "email": "jason.baker@alaskaair.com"
+    },
+    {
+      "name": "Jordan Jones",
+      "email": "jordan.jones4@alaskaair.com"
+    }
+  ]
+}
