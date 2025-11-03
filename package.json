@@ -1,31 +1,32 @@
 {
-  "name": "@aurodesignsystem/token-primitives",
+  "name": "@aurodesignsystem/auro-tokendefinitions",
   "version": "0.0.0",
-  "description": "Alaska Air Auro Design System token primitive repository",
-  "homepage": "https://github.com/AlaskaAirlines/DesignTokenPrimitives",
+  "description": "Alaska Air Auro Design System token definition repository",
+  "homepage": "https://github.com/AlaskaAirlines/DesignTokenDefinitions",
   "author": "Alaska Airlines Product design and engineering",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/AuroDesignTokenPrimitives"
+    "url": "https://github.com/AlaskaAirlines/DesignTokenDefinitions"
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": "^20.x || ^22.x"
+    "node": ">=20"
   },
   "devDependencies": {
-    "@aurodesignsystem/auro-config": "^1.3.0",
+    "@aurodesignsystem/auro-config": "^1.3.1",
     "husky": "^9.1.7"
   },
   "scripts": {
     "prepare": "husky"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "keywords": [
     "alaska airlines",
-    "css",
+    "hawiian airlines",
     "properties",
     "tokens"
   ],
