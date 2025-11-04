@@ -2,12 +2,12 @@
   "name": "@aurodesignsystem/auro-tokendefinitions",
   "version": "0.0.0",
   "description": "Alaska Air Auro Design System token definition repository",
-  "homepage": "https://github.com/AlaskaAirlines/DesignTokenDefinitions",
+  "homepage": "https://github.com/AlaskaAirlines/auro-tokendefinitions",
   "author": "Alaska Airlines Product design and engineering",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/DesignTokenDefinitions"
+    "url": "https://github.com/AlaskaAirlines/auro-tokendefinitions"
   },
   "license": "Apache-2.0",
   "engines": {
