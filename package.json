@@ -1,0 +1,52 @@
+{
+  "name": "@aurodesignsystem/auro-tokendefinitions",
+  "version": "0.0.0",
+  "description": "Alaska Air Auro Design System token definition repository",
+  "homepage": "https://github.com/AlaskaAirlines/auro-tokendefinitions",
+  "author": "Alaska Airlines Product design and engineering",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlaskaAirlines/auro-tokendefinitions"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@aurodesignsystem/auro-config": "^1.3.1",
+    "husky": "^9.1.7"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "alaska airlines",
+    "hawiian airlines",
+    "properties",
+    "tokens"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    "./readme.md": "./README.md",
+    "./alaska/*.json": "./tokens/alaska/*.json",
+    "./alaska-classic/*.json": "./tokens/alaska-classic/*.json",
+    "./auro-1/*.json": "./tokens/auro-1/*.json",
+    "./auro-2/*.json": "./tokens/auro-2/*.json",
+    "./base/*.json": "./tokens/base/*.json",
+    "./base/type/*.json": "./tokens/base/type/*.json",
+    "./hawaiian/*.json": "./tokens/hawaiian/*.json"
+  },
+
+  "files": [
+    "tokens/**/*",
+    "CHANGELOG.md",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ]
+}
