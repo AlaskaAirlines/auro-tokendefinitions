@@ -58,6 +58,13 @@
           "usage": "Subtle inverse surface color",
           "value": "{basic.color.brand.primary.value}"
         },
+        "neutral": {
+          "deprecated": false,
+          "public": true,
+          "type": "semantic",
+          "usage": "Medium neutral surface color",
+          "value": "{basic.color.brand.tertiaryMuted.value}"
+        },
         "neutralMedium": {
           "deprecated": false,
           "public": true,
